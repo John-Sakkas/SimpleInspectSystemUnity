@@ -49,7 +49,7 @@ __Player_UIText__ just shows the UI text
 
 
 ## 🚀 About Me
-My name is John and i'm a junior software enginer...
+My name is John and i'm a junior software engineer...
 
 
 ## 🔗 Links
