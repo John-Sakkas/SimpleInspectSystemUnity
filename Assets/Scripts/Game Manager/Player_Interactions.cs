@@ -40,6 +40,8 @@ public class Player_Interactions : MonoBehaviour
                 {
                     Examine_Object = hit.collider.gameObject;
                     examineSystem.ExamineAction(Examine_Object);
+                    _cursorIcon.ChangeMouseIcon(CursorLockMode.None, true, Color.white, 5);
+
                 }
                 else if (hit.collider.CompareTag("pickUp")) 
                 {
