@@ -62,42 +62,40 @@ public class ChangeSceneReaction : MonoBehaviour
 
     public void StartChangeScene() 
     {
-        //na allazi i ikona tou cursor se mia porta me ena belaki
-
         item_counter = 0;
         StopAllCoroutines();
         if (NeedItems)
         {
-            if (PlayerInventory.PlayerItems.Count != 0) // elexnei an iparxoun items sto inventory kai den exei gine complete to interaction
+            if (PlayerInventory.PlayerItems.Count != 0) // checks for items in the inventory
             {
-                for (int i = 0; i < PlayerInventory.PlayerItems.Count; i++) // gia ola ta antikeimena sto inventory
+                for (int i = 0; i < PlayerInventory.PlayerItems.Count; i++)  // checks the items in the inventory
                 {
-                    for (int y = 0; y < ConditionItem.Count; y++) // gia ola ta antikeimena sto condition
+                    for (int y = 0; y < ConditionItem.Count; y++) // items for the condition
                     {
-                        if (PlayerInventory.PlayerItems[i].name == ConditionItem[y].name) //an yparxoun kai den exei gine complete
+                        if (PlayerInventory.PlayerItems[i].name == ConditionItem[y].name) //if the items exist
                         {
-                            item_counter++; // afksise to counter 
+                            item_counter++; ////increase the counter
                         }
                         else
                         {
-                            notItemFind = true; // allios kati lipi
+                            notItemFind = true; // something missing
                         }
                     }
                 }
-                if (item_counter == ConditionItem.Count) // an iparxoun ola ta antikeimena
+                if (item_counter == ConditionItem.Count) //if you have all the items
                 {
                     notItemFind = false;
                     SceneManager.LoadScene(1);
                     Player_UIText.instance.DisplayUI(Done_Text);
                 }
 
-                if (notItemFind) //an lipi kati 
+                if (notItemFind) //something missing 
                 {
                     Player_UIText.instance.DisplayUI(Missing_text);
                     notItemFind = false;
                 }
             }
-            else // an den exei kanena antikeimeno sto inventory
+            else //no items
             {
                 Player_UIText.instance.DisplayUI("I dont have any item to try something!!!!!");
             }
@@ -116,7 +114,7 @@ public class ChangeSceneReaction : MonoBehaviour
                 SceneManager.LoadScene(1);
                 Player_UIText.instance.DisplayUI(Done_Text);
             }
-            else // an den exei kanena antikeimeno sto inventory
+            else //no items
             {
                 Player_UIText.instance.DisplayUI("I dont have any item to try something!!!!!");
             }

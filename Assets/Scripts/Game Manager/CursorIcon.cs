@@ -25,63 +25,6 @@ public class CursorIcon : MonoBehaviour
         PointOfInterest.MouseOn = false;
     }
 
-
-    // Update is called once per frame
-    //void Update()
-    //{
-    //    Cursor.visible = false;
-
-    //    Ray RayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
-    //    RaycastHit hit;
-
-    //    if (Physics.Raycast(RayOrigin, out hit, 50f))
-    //    {
-    //        if (hit.collider.CompareTag("pickUp") && ExamineSystem.ExamineMode)
-    //        {
-    //            pickUp.MouseOn = true;
-    //        }
-    //        else if (hit.collider.CompareTag("pointOfInterest") && ExamineSystem.ExamineMode)
-    //        {
-    //            PointOfInterest.MouseOn = true;
-    //        }
-    //        else if (hit.collider.CompareTag("Interaction"))
-    //        {
-    //            if (hit.collider.GetComponent<AnimationReaction>() != null)
-    //            {
-    //                if (hit.collider.GetComponent<AnimationReaction>().InteractionComplete)
-    //                    IsComplete = true;
-    //            }
-    //            else
-    //                IsComplete = false;
-
-    //        }
-    //        else
-    //        {
-    //            pickUp.MouseOn = false;
-    //            PointOfInterest.MouseOn = false;
-    //        }
-    //    }
-    //    else 
-    //    {
-    //        pickUp.MouseOn = false;
-    //        PointOfInterest.MouseOn = false;
-    //    }
-
-    //    if (ExamineSystem.ExamineMode)
-    //    {
-    //        if (pickUp.MouseOn)
-    //            ChangeMouseIcon(CursorLockMode.None, Input.mousePosition, Color.white, 3);            
-    //        else if (PointOfInterest.MouseOn)
-    //            ChangeMouseIcon(CursorLockMode.None, Input.mousePosition, Color.white, 4);
-    //        else
-    //            ChangeMouseIcon(CursorLockMode.None, Input.mousePosition, Color.white, 0);
-    //    }
-    //    else if (PlayerInventory.InventoryIsOn)
-    //        ChangeMouseIcon(CursorLockMode.None, Input.mousePosition, Color.black, 0);
-    //    else if (!InspectSystem.MouseOn && !ChangeSceneReaction.MouseOn && !AnimationReaction.MouseOn && !pickUp.MouseOn && !PointOfInterest.MouseOn)
-    //        ChangeMouseIcon(CursorLockMode.Locked, DefaultPos, Color.white, 5);
-    //}
-
     public void Update()
     {
         if(_startMove)

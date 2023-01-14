@@ -49,31 +49,29 @@ public class AnimationReaction : MonoBehaviour
     {
         StopAllCoroutines();
         item_counter = 0;
-        if (PlayerInventory.PlayerItems.Count != 0 && !InteractionComplete) // elexnei an iparxoun items sto inventory kai den exei gine complete to interaction
+        if (PlayerInventory.PlayerItems.Count != 0 && !InteractionComplete) // checks for items in the inventory and if the interaction is false
         {
-            for (int i = 0; i < PlayerInventory.PlayerItems.Count; i++) // gia ola ta antikeimena sto inventory
+            for (int i = 0; i < PlayerInventory.PlayerItems.Count; i++) // checks the items in the inventory
             {
-                for (int y = 0; y < ConditionItem.Count; y++) // gia ola ta antikeimena sto condition
+                for (int y = 0; y < ConditionItem.Count; y++) // items for the condition
                 {
-                    if (PlayerInventory.PlayerItems[i].name == ConditionItem[y].name && !InteractionComplete) //an yparxoun kai den exei gine complete
+                    if (PlayerInventory.PlayerItems[i].name == ConditionItem[y].name && !InteractionComplete) //if the items exist and the condition is false
                     {
-                        item_counter++; // afksise to counter 
+                        item_counter++; //increase the counter 
                     }
                     else
                     {
-                        notItemFind = true; // allios kati lipi
+                        notItemFind = true; // else no item
                     }
                 }
             }
 
-            if (item_counter == ConditionItem.Count) // an iparxoun ola ta antikeimena
+            if (item_counter == ConditionItem.Count) // if the condition is true you have all the items
             {
                 notItemFind = false; 
-
-
-                InteractionComplete = true; // to interaction egine 
+                InteractionComplete = true; // interaction complete 
                 InteractioGameobject_Done.SetActive(true);
-                Interaction_Animation.SetBool(Interaction_Animation.parameters[0].name, true); // trekse to animation
+                Interaction_Animation.SetBool(Interaction_Animation.parameters[0].name, true); //tun the animation
 
                 Player_UIText.instance.DisplayUI(Done_Text);
 
@@ -83,20 +81,20 @@ public class AnimationReaction : MonoBehaviour
                     {
                         if (PlayerInventory.PlayerItems[y].name == ConditionItem[i].name)
                         {
-                            PlayerInventory.DeleteItem(PlayerInventory.PlayerItems[y]); // bres ta antikeimena sto inventory kai svista
+                            PlayerInventory.DeleteItem(PlayerInventory.PlayerItems[y]); //delete the items in the inventory
                         }
                     }
                 }
             }
 
-            if (notItemFind) //an lipi kati 
+            if (notItemFind) //is you miss an item 
             {
                 Player_UIText.instance.DisplayUI(Missing_text);
                 notItemFind = false;
             }
 
         }
-        else if (!InteractionComplete) // an den exei kanena antikeimeno sto inventory
+        else if (!InteractionComplete) //if you dont have any item
         {
             Player_UIText.instance.DisplayUI("I dont have any item to try something!!!!!");
         }
