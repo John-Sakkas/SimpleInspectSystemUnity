@@ -22,7 +22,7 @@ dont pick up the object.
 
 Every item you want to inpsect must have the __InspectSystem__. It's control the 
 rotation , the zoomIn/zoomOut and to change the cursor icon.
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](GitImg/Inspect-Item.png)
 
 __PlayerInventory__ uses a simple List<GameObject> to "save" the items. An update the 
 canvas of the inventory.
