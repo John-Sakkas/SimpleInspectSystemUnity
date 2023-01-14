@@ -4931,5 +4931,20 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300004, guid: 00718395eefb6084bb25555f962f25c0, type: 3}
+    - target: {fileID: 7358001378677212236, guid: f14cc7a26d8ef9d45aed02436a8e1ede,
+        type: 3}
+      propertyPath: Item_icon
+      value: 
+      objectReference: {fileID: 2800000, guid: 1167c0a28d11119930004d8a4241aa39, type: 3}
+    - target: {fileID: 7358001378677212236, guid: f14cc7a26d8ef9d45aed02436a8e1ede,
+        type: 3}
+      propertyPath: Item_Title
+      value: Gold Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358001378677212236, guid: f14cc7a26d8ef9d45aed02436a8e1ede,
+        type: 3}
+      propertyPath: Item_Discription
+      value: One Gold Coin
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f14cc7a26d8ef9d45aed02436a8e1ede, type: 3}
