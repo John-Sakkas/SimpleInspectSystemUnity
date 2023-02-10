@@ -53,8 +53,6 @@ My name is John and i'm a junior software engineer...
 
 ## 🔗 Links
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/giannis-sakkas-a67587260/)
-[![facebook](https://img.shields.io/badge/facebook-0000FF?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/giannis.sakkas.5)
-
 
 ## Support
 
